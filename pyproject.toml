@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vstreamalert-mcp-base"
+version = "1.0.0"
+description = "Extended AWS Athena MCP for VStreamAlert"
+requires-python = ">=3.10"
+dependencies = [
+    "aws-athena-mcp>=1.0.0",
+]
+
+[project.scripts]
+vstreamalert-mcp-base = "athena:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.py"]
